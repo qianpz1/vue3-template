@@ -1,9 +1,29 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Vue3 + TS + Vite
 
-## Recommended Setup
+引入postcss-px-to-viewport-8-plugin，适配大小屏，px自动转换rem  
+useThemes 主题切换
+useLocaleModel 语言切换
+useFontSize 计算root font-size
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+## ENV介绍：  
+环境变量-生产、测试  
+VITE_APP_ENV=development  
+加密KEY-用于localstorage等等存储加密  
+VITE_APP_AES_KEY=123456  
+TOKEN-网络请求token的请求头key  
+VITE_APP_TOKEN_NAME=X-CSRFTOKEN  
+TOKEN前缀-可定义前缀，例如：Bearer!1，自动替换!1  
+VITE_APP_TOKEN_CONTENT=!1  
+路由路径  
+VITE_APP_ROOT_ROUTE=/  
+路由模式-hash、history  
+VITE_APP_ROUTE_MODE=hash  
+打包文件名  
+VITE_APP_PACKAGE_NAME=dist  
+设计图宽度  
+VITE_APP_BASE_CLIENT_WIDTH=1920  
+设计图基础字体大小  
+VITE_APP_BASE_FONT_SIZE=16  
+是否使用远程路由  
+VITE_APP_REMOTE_ROUTER=false  
