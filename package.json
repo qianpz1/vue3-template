@@ -1,0 +1,40 @@
+{
+  "name": "ts-vue3-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.7.0",
+    "axios": "^1.6.2",
+    "crypto-ts": "^1.0.2",
+    "element-plus": "^2.4.4",
+    "pinia": "^2.1.7",
+    "rxjs": "^7.8.1",
+    "vue": "^3.4.21",
+    "vue-i18n": "^9.8.0",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "less": "^4.2.0",
+    "postcss": "latest",
+    "postcss-loader": "latest",
+    "postcss-px-to-viewport-8-plugin": "^1.2.3",
+    "sass": "^1.69.6",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.17.2",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.2.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-conditional-compiler": "^0.2.1",
+    "vite-plugin-define": "^1.0.6",
+    "vite-plugin-mkcert": "^1.17.1",
+    "vue-tsc": "^2.0.6"
+  }
+}
