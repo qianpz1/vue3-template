@@ -17,7 +17,7 @@ export function useLocale () {
         for(let locale of locales) {
             if (!localeList.has(locale)) {
                 try {
-                    const json = await import(`../locales/${localeLang}/${locale}.json`)
+                    const json = await import(/* webpackChunkName: "lang" */ `../locales/${localeLang}/${locale}.json`)
                     Object.assign(langs, json.default)
                     localeList.add(locale)
                 } catch(e) {

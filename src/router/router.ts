@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const isHash = import.meta.env.VITE_APP_ROUTE_MODE === 'hash'
-const rootRoute = import.meta.env.VITE_APP_ROOT_ROUTE || '/'
+const rootRoute = import.meta.env.VITE_APP_BASE_URL || '/'
 
 const router = createRouter({
     history: isHash ? createWebHashHistory() : createWebHistory(rootRoute),

@@ -12,6 +12,7 @@ export default ({ mode }: UserConfig) => {
   const envs = path.join(process.cwd(), 'envs')
   const envConfig = loadEnv(mode!, envs)
   return defineConfig({
+    base: envConfig.VITE_APP_BASE_URL,
     envDir: envs,
     resolve: {
       alias: {
