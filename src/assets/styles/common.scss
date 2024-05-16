@@ -1,0 +1,89 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row-align($position: center) {
+    @include flex-row;
+    align-items: $position;
+}
+
+@mixin flex-row-justify($position: center) {
+    @include flex-row;
+    justify-content: $position;
+}
+
+@mixin flex-row-align-justify($aposition: center, $jposition: center) {
+    @include flex-row;
+    align-items: $aposition;
+    justify-content: $jposition;
+}
+
+@mixin flex-column-align($position: center) {
+    @include flex-column;
+    align-items: $position;
+}
+
+@mixin flex-column-justify($position: center) {
+    @include flex-column;
+    justify-content: $position;
+}
+
+@mixin flex-column-align-justify($aposition: center, $jposition: center) {
+    @include flex-column;
+    align-items: $aposition;
+    justify-content: $jposition;
+}
+
+
+$font-base-size: 12px;
+$font-step: 1px;
+
+@mixin text-small-size($weight: 400) {
+    font-size: $font-base-size;
+    font-weight: $weight;
+}
+
+@mixin text-basic-size($weight: 400) {
+    font-size: $font-base-size + $font-step * 2;
+    font-weight: $weight;
+}
+
+@mixin text-large-size($weight: 400) {
+    font-size: $font-base-size + $font-step * 4;
+    font-weight: $weight;
+}
+
+@mixin text-x-large-size($weight: 400) {
+    font-size: $font-base-size + $font-step * 6;
+    font-weight: $weight;
+}
+
+.font-small-size {
+    @include text-small-size;
+}
+
+.font-basic-size {
+    @include text-basic-size;
+}
+
+.font-large-size {
+    @include text-large-size;
+}
+
+.font-large-bold {
+    @include text-large-size(700);
+}
+
+.font-x-large-size {
+    @include text-x-large-size;
+}
+
+.font-x-large-bold {
+    @include text-x-large-size(700);
+}

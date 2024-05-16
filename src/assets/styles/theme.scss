@@ -1,0 +1,31 @@
+$themes: (
+    light: (
+        textColor: #FFF
+    ),
+    dark: (
+        textColor: #FF2211
+    )
+);
+
+$currentTheme: light;
+
+@mixin useTheme() {
+    @each $key, $value in $themes {
+        $currentTheme: $key !global;
+        html[data-theme='#{$key}'] & {
+            @content;
+        }
+    }
+};
+
+@function getVar($key) {
+    $obj: map-get($map: $themes, $key: $currentTheme);
+    @return map-get($map: $obj, $key: $key);
+}
+
+
+.color {
+    @include useTheme {
+        color: getVar('textColor');
+    }
+}
